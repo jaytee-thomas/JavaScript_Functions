@@ -39,6 +39,8 @@ function cartesianPlane(x, y) {
     document.write(`(${x}, ${y}) is in Quadrant 3`);
   } else if (x > 0 && y < 0) {
     document.write(`(${x}, ${y}) is in Quadrant 4`);
+  } else if (x === 0 && y === 0) {
+    document.write(`(${x}, ${y}) is at Origin`);
   } else {
     document.write(`(${x}, ${y}) is on the Axis`);
   }
