@@ -45,5 +45,40 @@ function cartesianPlane(x, y) {
 }
 
 cartesianPlane(5, 0);
+document.write("<br></br>");
 
 // Exercise 4 Section
+document.write("EXERCISE 4:\nWhat Type of triangle?\n <br></br>");
+function triangleSides(a, b, c) {
+  if (a === b && b === c) {
+    document.write("Equilateral");
+  } else if (a === b || b === c || a === c) {
+    document.write("Isosceles");
+  } else {
+    document.write("Scalene");
+  }
+}
+
+triangleSides(1, 1, 1);
+document.write("<br></br>");
+
+// Exercise 5 Section
+document.write("EXERCISE 5:\nData Plan Status\n <br></br>");
+let planLimit = 100;
+let dayPlan = 30;
+
+function planStatus(planLimit, day, usage) {
+  if (usage > planLimit) {
+    document.write(
+      `You have exceeded your data limit by ${usage - planLimit} GB`
+    );
+  } else if (usage < planLimit) {
+    document.write(`You have ${planLimit - usage} GB remaining`);
+  } else if (usage === planLimit) {
+    document.write(`You are right on target`);
+  } else {
+    document.write(`You have used all of your data for the month`);
+  }
+}
+
+planStatus(100, 1, 10);
